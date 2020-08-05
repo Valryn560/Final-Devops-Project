@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nginx:
+    image: jadesola/sp-nginx
+    build: ./nginx
+    ports:
+      - 80:80
+    
+
+  rest-api:
+    image: jadesola/sp-rest
+    build: ./spring-petclinic-rest
+    ports:
+      - 9966:9966
+    
+  
+  sp-ang:
+    image: jadesola/sp-angular
+    build: ./spring-petclinic-angular
+    depends_on:
+      - rest-api
+    ports:
+      - 4200:4200
+    
