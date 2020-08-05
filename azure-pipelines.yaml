@@ -1,5 +1,8 @@
-pool:
-  name: Ubuntu-Worker-Agent
-- task: CmdLine@2
+pool: Ubuntu-Worker-Agent
+- task: Bash@3
   inputs:
-    script: 'echo Hello world'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
