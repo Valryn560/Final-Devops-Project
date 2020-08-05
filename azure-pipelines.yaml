@@ -1,0 +1,5 @@
+pool:
+  name: Ubuntu-Worker-Agent
+- task: CmdLine@2
+  inputs:
+    script: 'echo Hello world'
