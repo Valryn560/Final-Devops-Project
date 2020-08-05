@@ -1,8 +1,5 @@
-pool: Ubuntu-Worker-Agent
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo 'Hello world'
+jobs:
+- job: Ubuntu
+  pool: Ubuntu-Worker-Agent
+  steps:
+  - bash: echo "Hello Ubuntu"
