@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: Ubuntu-Worker-Agent
+  name: SelfHosted-Manager
 
 steps:
 - script: echo Hello, world!
